@@ -86,14 +86,8 @@ export default function Home() {
       <br/>
 
       <div className={`flex flex-row justify-evenly px-2 flex-wrap`}>
-        {selected?.map((el,index) => (<ChartDisplay key={index} crypto={el.coin} direction={el.direction}/>))}
+        {selected?.map((el,index) => (<ChartDisplay key={'id_'+index} crypto={el.coin} direction={el.direction}/>))}
       </div>
-      
-
-      
-
-      
-
 
     </main>
   )

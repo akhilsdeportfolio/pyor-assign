@@ -6,7 +6,7 @@ import { Card, SpinLoading } from 'antd-mobile';
 import moment from 'moment/moment';
 import { Select } from 'antd';
 
-export default function ChartDisplay({ crypto="ethereum",direction}) {
+export default function ChartDisplay({ crypto="ethereum",direction="row"}) {
     const ref = useRef(null);
 
 
@@ -21,7 +21,7 @@ export default function ChartDisplay({ crypto="ethereum",direction}) {
     
 
     useEffect(() => {        
-        var myChart = echarts.init(ref.current||document.getElementById("chart"));
+        var myChart = echarts.init(ref.current);
         var option;
 
         option = {
