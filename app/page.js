@@ -41,7 +41,7 @@ export default function Home() {
         }}
         defaultValue={selected}
         placeholder="Please select"
-        onChange={(e) => { console.log("Changed",e);setSelected(e) }}
+        onChange={(e) => { setSelected(e) }}
         options={options}
       />}
       
