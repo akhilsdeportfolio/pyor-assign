@@ -40,7 +40,7 @@ export default function ChartDisplay({ crypto = "ethereum" }) {
     useEffect(() => {
 
         async function fetchData(crypto) {
-            const data = await fetch(`https://api.coingecko.com/api/v3/coins/${crypto}/market_chart?vs_currency=usd&days=365&interval=daily`, { method: "GET" });
+            const data = await fetch(`https://api.coingecko.com/api/v3/coins/${crypto}/market_chart?vs_currency=usd&days=365&interval=daily`,{});
             setLoading(false);
             const json = await data.json();
             const X = json.prices.map((el) => moment.unix(el[0]).format('MMMM'));
